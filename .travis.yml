@@ -7,7 +7,7 @@ script:
 - ls
 - cd module-submodule
 - git submodule update --recursive --remote --merge
-- ls
+- cat submodule/README.md
 - git status
 - git add .
 - git commit -m"Travis update submodule $TRAVIS_BUILD_NUMBER"

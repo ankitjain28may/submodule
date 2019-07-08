@@ -5,3 +5,4 @@ This is the submodule which is used by some other module as a git submodule. We 
 ### Updates
 
 1. Hello World
+2. Hi testing.

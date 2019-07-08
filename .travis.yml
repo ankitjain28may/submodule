@@ -9,6 +9,8 @@ script:
   - git submodule update --init
 
 after_script:
+  - ls
+  - git status
   - git add .
-  - git commit --m"Travis update submodule: $TRAVIS_BUILD_NUMBER"
+  - git commit -m"Travis update submodule: $TRAVIS_BUILD_NUMBER"
   - git push --quiet origin master

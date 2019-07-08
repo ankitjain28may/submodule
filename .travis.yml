@@ -7,9 +7,9 @@ script:
   - git clone https://github.com/ankitjain28may/module-submodule.git
   - ls
   - cd module-submodule
-  - git submodule update --init
+  - git submodule update --recursive --remote --merge
   - ls
   - git status
   - git add .
-  - git commit -m"Travis update submodule: $TRAVIS_BUILD_NUMBER"
-  - git push --quiet origin master
+  - git commit -m"Travis update submodule $TRAVIS_BUILD_NUMBER"
+  - git push origin master

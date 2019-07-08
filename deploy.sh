@@ -1,9 +1,9 @@
 #!/bin/bash
 
 git clone https://github.com/ankitjain28may/module-submodule.git
-ls
 cd module-submodule
-git submodule update --recursive --remote --merge
+git submodule update --init --remote --recursive
+ls
 ls submodule
 cat submodule/README.md
 git status

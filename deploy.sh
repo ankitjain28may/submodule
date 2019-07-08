@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone https://github.com/ankitjain28may/module-submodule.git
+git clone git@github.com:ankitjain28may/module-submodule.git
 cd module-submodule
 git submodule update --init --remote --recursive
 ls

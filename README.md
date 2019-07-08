@@ -4,4 +4,4 @@ This is the submodule which is used by some other module as a git submodule. We 
 
 ### Updates
 
-. Hello World
+1. Hello World

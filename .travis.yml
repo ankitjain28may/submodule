@@ -1,0 +1,14 @@
+language: ruby
+
+before_script:
+  - git config --global user.email "travis@travis-ci.org"
+  - git config --global user.name "Travis CI"
+script:
+  - git clone https://github.com/ankitjain28may/module-submodule.git
+  - cd module-submodule
+  - git submodule update --init
+
+after_script:
+  - git add .
+  - git commit --m"Travis update submodule: $TRAVIS_BUILD_NUMBER"
+  - git push --quiet origin master

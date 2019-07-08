@@ -3,7 +3,7 @@ before_script:
 - git config --global user.email "travis@travis-ci.org"
 - git config --global user.name "Travis CI"
 script:
-- chmod 400 deploy.sh
+- chmod +x deploy.sh
 - ./deploy.sh
 env:
   global:

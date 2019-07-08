@@ -1,15 +1,17 @@
 language: ruby
-
 before_script:
-  - git config --global user.email "travis@travis-ci.org"
-  - git config --global user.name "Travis CI"
+- git config --global user.email "travis@travis-ci.org"
+- git config --global user.name "Travis CI"
 script:
-  - git clone https://github.com/ankitjain28may/module-submodule.git
-  - ls
-  - cd module-submodule
-  - git submodule update --recursive --remote --merge
-  - ls
-  - git status
-  - git add .
-  - git commit -m"Travis update submodule $TRAVIS_BUILD_NUMBER"
-  - git push origin master
+- git clone https://github.com/ankitjain28may/module-submodule.git
+- ls
+- cd module-submodule
+- git submodule update --recursive --remote --merge
+- ls
+- git status
+- git add .
+- git commit -m"Travis update submodule $TRAVIS_BUILD_NUMBER"
+- git push origin master
+env:
+  global:
+    secure: kw/Vqc6gy6wsdVfTMTyiCma2/HziuR1sQlWUD/net9stma0Ixgd1za3Xq2WyQbatjXrxx4cIL5wc5bFNi5oWgkIdNCD3SBUl+d7lj9te17SbmL2jf41psvlkE3hoEJi2Qkq4lK4llKjR2g1QeLSymdxTfqJPTg/C0Ag5eAn80JOd12LbBs2GROH/71ue1+20DykJUYkhDk9b8k7qwa69/t3VZkgsMVT2Y1E8BWVYNwD4cidXFvgI0Owh1wn29U8Hjr8DF3MZLtRQJCN5IpzyRy2b6Ohvsew+xbADuPOsJNrupdUU6Tj0h7X6/MWj/Ov5VFokRQPZRhRuVUycdV8G9jWlGIkhO82xLE5bJrkebpyYE9AetDgw/le53q6ql0xzm8khKvKyWwX8KN3wawmCYL52i0MXsVJPnR78PX7tTaYkGLWhdpi8BW7HF6jFTYnxOCVnLWx57OYlZtdd2mtbSuHE9rs8Eakwy5GK+BXNoCnOLHUZhWMYg66+J3le5hU9q5tBbuQfU9L2wQcCmqtKRUcRsDFgIQeib/4ByFMS+um9pn/5KuLuYavkBeV0Q03+yu/OGuwSy01JFmUBH7wlsVRFk5C4sjT1febiC6OXBj7sUYSPRY/iamG4fCq3za1YEkBS/ziSP46G460Lm9kgz4UPruResfKuPwc5z0xa/UQ=

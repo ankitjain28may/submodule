@@ -2,9 +2,10 @@ language: ruby
 before_script:
 - git config --global user.email "travis@travis-ci.org"
 - git config --global user.name "Travis CI"
+- eval "$(ssh-agent -s)"
+- openssl aes-256-cbc -K $encrypted_cab53b80d065_key -iv $encrypted_cab53b80d065_iv -in deploy_key.enc -out ./deploy_key -d
+- chmod 600 ./deploy_key
+- ssh-add ./deploy_key
 script:
 - chmod +x deploy.sh
 - "./deploy.sh"
-env:
-  global:
-  - secure: Sq6jxN5hJNWFIUCWVPdNaRPfAoFaQpm1F5eBE/FCZzBdZWSvlME3ezWUnkDtzv8AY+JvJPQxvYDEUdqvZ1YDfmlHLDUPaRJllCDI+BU5KprTcz3R06xmijOIioNZAH0PQKncII/xf6XEg9R/K2JWBdOzt40CHhcTfyzP7MS4Nwr1A4o7OW3dmWsBwtX+wK10ewSBgqKEPuNkfjGaYuHR1JcdE4Xzc1aFNLESEVM0ML/DpBqrC5IU+jRIft39LldM+FBF9bs7p0Hh1ALLqb6XdJn4i9NwCFJYPCDDViKLLW/LSpmgjSxArs5YqT2kd48OazSoDazuEvRPn6qudrG2+6cJJWWEHwgq1tD6GaHiwuig6aDsz5h+mPq0bD3HFu2hF0cAqj8vEHloHY+gyAn9kJrUnCt1MxdXrknZ43aNz/Ui1AZG7excCC9ncN3Sk0MfiID2j4jLT9eD0ESr+BiTL0Kvob+NvaVatznpfEby1wz+i4AmGqZBMDbmZhoDPTgqCDya/xcwRQb6eB7jGKThWYvhT+S4pgw8rEBZT3PBAAKaNkrvQGRbEqAGLVTo31io6gruuf7pg1kw3U7xTdItMj9TWrI5UKF9Y8HfLt8RjFF2+/vJXL+Wgk+d9asfFROx1dSjDhzdtRK1JUFfw96uigHba+qyqh70LvjcBjzeR4I=
